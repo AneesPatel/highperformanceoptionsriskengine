@@ -21,9 +21,3 @@ var perfMetrics = PerformanceMetrics.MeasurePerformanceImprovement(
     simulationPaths: 1_000_000, 
     useAntitheticVariates: true
 );
-
-Console.WriteLine($"Scalar:   {perfMetrics.ScalarTimeMs:F2} ms");
-Console.WriteLine($"AVX2:     {perfMetrics.SimdTimeMs:F2} ms");
-Console.WriteLine($"Speedup:  {perfMetrics.SpeedupFactor:F2}x");
-Console.WriteLine($"Improvement: {perfMetrics.ThroughputImprovementPercent:F1}%");
-
